@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import JoinedGroupAndFriendView from "./JoinedGroupAndFriendView";
 const Sidebar = () => {
     return (
         <div className="border p-4 flex flex-col bg-gray-100 flex-shrink-0">
@@ -8,6 +8,9 @@ const Sidebar = () => {
                 <h1 className="text-xl mb-3 font-bold sidebarSectionText">
                     Joined Groups
                 </h1>
+                <JoinedGroupAndFriendView />
+                <JoinedGroupAndFriendView />
+                <JoinedGroupAndFriendView />
                 <div className="flex flex-col space-y-3">
                     <NavLink
                         to="/group/financial-markets"
@@ -26,9 +29,9 @@ const Sidebar = () => {
                     Friends Online
                 </h1>
                 <div className="flex flex-col space-y-3">
-                    <p className="sidebarContentText">Name 1</p>
-                    <p className="sidebarContentText">Name 2</p>
-                    <p className="sidebarContentText">Name 3</p>
+                    <JoinedGroupAndFriendView />
+                    <JoinedGroupAndFriendView />
+                    <JoinedGroupAndFriendView />
                 </div>
             </div>
         </div>

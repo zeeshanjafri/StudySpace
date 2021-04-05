@@ -385,4 +385,21 @@ a {
   font-size: 1.4rem;
 }
 
+.joinedGroupAndFriendViewWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.joinedGroupAndFriendViewWrap p {
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 1rem;
+}
+.joinedGroupAndFriendViewWrap img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
