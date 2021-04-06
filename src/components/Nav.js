@@ -32,7 +32,7 @@ const Sidebar = () => {
               key={friend.name}
               title={friend.name}
               image={friend.avatar}
-              slug={friend.profileLink}
+              slug={friend.profileLink} // need to think more about this
             />
           ))}
           
