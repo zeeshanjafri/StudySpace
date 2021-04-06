@@ -1,0 +1,7 @@
+.groupViewContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    background-color: blue;
+    padding: 1rem;
+}
