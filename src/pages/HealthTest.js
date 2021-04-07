@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState, Component } from "react";
 
 const api = axios.create({
   baseURL: `http://127.0.0.1:8000/`,
@@ -49,18 +49,19 @@ function Icon(props) {
 }
 
 // The main component
-const HealthTest = () => {
-  const [healthy, setHealth] = useState(false);
-
-  return (
-    <div className="flex flex-col w-full p-10 border">
-      <h1 className="text-2xl font-bold">Backend Status:</h1>
-      <span className="flex flex-row mt-2 space-x-3">
-        <h2 className="text-xl font-bold">The Database is</h2>
-        <Icon healthy={healthy} />
-      </span>
-    </div>
-  );
-};
+class HealthTest extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="flex flex-col w-full p-10 border">
+        <h1 className="text-2xl font-bold">Backend Status:</h1>
+        <span className="flex flex-row mt-2 space-x-3">
+          <h2 className="text-xl font-bold">The Database is</h2>
+          <Icon healthy={true} />
+        </span>
+      </div>
+    );
+  }
+}
 
 export default HealthTest;

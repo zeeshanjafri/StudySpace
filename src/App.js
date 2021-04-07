@@ -22,7 +22,7 @@ function App() {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/about" component={About} />
-            <Route path="/group/financial-markets" component={Group} />
+            <Route path="/group/:groupName" component={Group} />
             <Route path="/health-test" component={HealthTest} />
             <Route component={Error} />
           </Switch>
