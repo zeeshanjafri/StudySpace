@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.groupViewContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem; }
+
+.sidebarSectionText {
+  color: black;
+  font-size: 2.4rem;
+  font-weight: bold; }
+
+.sidebarContentText {
+  color: black;
+  font-size: 2rem; }
+
+.groupViewWrap {
+  max-width: 12rem;
+  background: white;
+  grid-gap: 1rem;
+  border-radius: 0.25rem; }
+  .groupViewWrap .groupViewImg {
+    width: 100%;
+    object-fit: cover; }
+  .groupViewWrap p {
+    text-align: center;
+    font-size: 1.4rem; }
+
+.joinedGroupAndFriendViewWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .joinedGroupAndFriendViewWrap p {
+    font-size: 1.2rem;
+    color: black;
+    margin-left: 1rem; }
+  .joinedGroupAndFriendViewWrap img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover; }
+
+/*# sourceMappingURL=main.css.map */

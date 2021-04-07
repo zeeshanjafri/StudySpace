@@ -1,0 +1,15 @@
+.groupViewWrap {
+  max-width: 12rem;
+  background: white;
+  grid-gap: 1rem;
+  border-radius: 0.25rem;
+
+  .groupViewImg {
+    width: 100%;
+    object-fit: cover;
+  }
+  p {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}

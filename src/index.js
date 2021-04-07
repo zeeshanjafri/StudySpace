@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "./css/main.css";
+import "./css/main.css";
+import "./index.css";
+
 import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";

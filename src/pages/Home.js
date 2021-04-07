@@ -1,7 +1,11 @@
-import PostView, {demoPosts} from "../components/PostView"
+import PostView from "../components/PostView";
+import GroupView from "../components/GroupView";
+import { demoGroups } from "../data/demoGroups";
+import { demoPosts } from "../data/demoPosts";
 
 // This limits the posts to the top 3
-const posts = demoPosts.slice(0,3);
+const posts = demoPosts.slice(0, 3);
+const groups = demoGroups.slice(0, 4);
 
 const Home = () => {
   return (
@@ -12,10 +16,20 @@ const Home = () => {
         <p className="">Connect with Friends | Create Groups | Chat in Desks</p>
       </div>
       {/* This is the container for the two bottom columns */}
-      <div className="flex flex-row flex-grow px-5 py-2 space-x-5 ">
+      <div className="flex flex-row flex-grow px-5 py-2 space-x-5">
         {/* Top Groups Section */}
-        <div className="flex border w-1/2 rounded-lg">
+        <div className="groupSection w-1/2 border rounded-lg p-4">
           <h1 className="text-lg font-bold">Top Groups</h1>
+          <div className="groupViewContainer mt-2">
+            {groups.map((group) => (
+              <GroupView
+                key={group.slug}
+                title={group.title}
+                image={group.image}
+                slug={group.slug}
+              />
+            ))}
+          </div>
         </div>
         {/* Top Posts Section */}
         <div className="flex flex-col border w-1/2 rounded-lg p-4 bg-gray-50">
