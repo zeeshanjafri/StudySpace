@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import HealthTest from "./pages/HealthTest";
 import Group from "./components/Group";
 import Sidebar from "./components/Nav";
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" component={Home} exact />
             <Route path="/about" component={About} />
             <Route path="/group/financial-markets" component={Group} />
+            <Route path="/health-test" component={HealthTest} />
             <Route component={Error} />
           </Switch>
         </div>
