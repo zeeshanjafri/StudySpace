@@ -9,10 +9,20 @@ import Sidebar from "./components/Nav";
 function App() {
   return (
     <>
-      <div className="border p-4 bg-blue-900 border-gray-50">
+      <div className="border p-4 bg-blue-900 border-gray-50 px-4 mx-auto flex flex-wrap items-center justify-between">
         <a href="/">
-          <p className="text-3xl text-white">StudySpace</p>
+          <p className="text-3xl text-white px-5">StudySpace</p>
         </a>
+
+        <nav className="px-5">
+        <a href="/"
+          className="text-2xl text-white px-5"> Profile
+        </a>
+        <a href="/"
+          className="text-2xl text-white px-5"> Messages
+        </a>
+        </nav>
+
       </div>
       <BrowserRouter>
         <div className="flex flex-row border h-screen">
