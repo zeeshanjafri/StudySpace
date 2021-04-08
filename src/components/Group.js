@@ -1,10 +1,12 @@
+import GroupHeader from "./GroupHeader";
 const Group = (props) => {
     return (
-       <div>
-          <h1 className="text-3xl">Group Page</h1>
-           <p>Group page body content</p>
-       </div>
+        <div className="groupContainer">
+            <h1 className="text-3xl">Group Page</h1>
+            <GroupHeader />
+            <p>Group page body content</p>
+        </div>
     );
-}
- 
+};
+
 export default Group;

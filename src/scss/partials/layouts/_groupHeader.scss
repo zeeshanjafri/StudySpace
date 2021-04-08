@@ -1,0 +1,46 @@
+.groupHeader {
+    padding: 1rem;
+    width: 100%;
+}
+
+.groupTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.headerImageAndJoinWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    > img {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+    .joinGroup {
+        margin-left: auto;
+        color: white;
+        background: red;
+        padding: 0.25rem;
+        font-size: 1.2rem;
+        box-shadow: none;
+        border: 1px solid red;
+        border-radius: 0.25rem;
+    }
+    margin-bottom: 1rem;
+}
+
+.tagsWrap {
+    p {
+        background-color: grey;
+        padding: 0.25rem 3rem;
+        color: white;
+        border-radius: 0.25rem;
+    }
+
+    display: flex;
+    justify-content: space-evenly;
+}
