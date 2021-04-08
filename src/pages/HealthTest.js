@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 
 const api = axios.create({
   baseURL: `http://127.0.0.1:8000/`,
@@ -7,11 +7,6 @@ const api = axios.create({
 
 // This line makes sure that the response is in JSON format
 api.defaults.headers.common["Content-Type"] = "application/json";
-
-// The api call
-api.get("ht/").then((res) => {
-  console.log(res.data);
-});
 
 // The conditional icon
 function Icon(props) {
@@ -50,14 +45,31 @@ function Icon(props) {
 
 // The main component
 class HealthTest extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = { healthy: false }; // initial state
+  }
+
+  componentDidMount() {
+    // The API Call
+    api.get("ht/").then((res) => {
+      // console.log(res.data.DatabaseBackend);
+
+      if (res.data && res.data.DatabaseBackend === "working") {
+        this.setState({
+          healthy: true,
+        });
+      }
+    });
+  }
+
   render() {
     return (
       <div className="flex flex-col w-full p-10 border">
         <h1 className="text-2xl font-bold">Backend Status:</h1>
         <span className="flex flex-row mt-2 space-x-3">
           <h2 className="text-xl font-bold">The Database is</h2>
-          <Icon healthy={true} />
+          <Icon healthy={this.state.healthy} />
         </span>
       </div>
     );
