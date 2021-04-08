@@ -63,9 +63,14 @@ a {
 }
 
 .groupTitle {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .groupTitle {
+    font-size: 2rem;
+  }
 }
 
 .headerImageAndJoinWrap {
@@ -77,19 +82,30 @@ a {
 }
 .headerImageAndJoinWrap > img {
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .headerImageAndJoinWrap > img {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 .headerImageAndJoinWrap .joinGroup {
   margin-left: auto;
   color: white;
   background: red;
   padding: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   box-shadow: none;
   border: 1px solid red;
   border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .headerImageAndJoinWrap .joinGroup {
+    font-size: 1.2rem;
+  }
 }
 
 .tagsWrap {
@@ -98,9 +114,14 @@ a {
 }
 .tagsWrap p {
   background-color: grey;
-  padding: 0.25rem 3rem;
+  padding: 0.25rem 1.25rem;
   color: white;
   border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .tagsWrap p {
+    padding: 0.25rem 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
