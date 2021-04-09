@@ -1,25 +1,26 @@
 .groupDescContainer {
+  //   width: 100%;
+  //   min-width: 50%;
+  //   background-color: grey;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  h1 {
+    font-size: 1.4rem;
+    @media screen and (min-width: $md_breakpoint) {
+      font-size: 2rem;
+    }
+  }
+  p {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 1rem;
+    @media screen and (min-width: $md_breakpoint) {
+      font-size: 1.4rem;
+    }
+  }
+  .underline {
     width: 100%;
-    background-color: grey;
-    border-radius: 3rem;
-    padding: 1rem 2rem;
-    h1 {
-        font-size: 1.4rem;
-        @media screen and (min-width: $md_breakpoint) {
-            font-size: 2rem;
-        }
-    }
-    p {
-        font-size: 1.1rem;
-        margin: 0;
-        margin-top: 1rem;
-        @media screen and (min-width: $md_breakpoint) {
-            font-size: 1.4rem;
-        }
-    }
-    .underline {
-        width: 100%;
-        height: 0.1rem;
-        background-color: black;
-    }
+    height: 0.1rem;
+    background-color: black;
+  }
 }

@@ -17,4 +17,11 @@ const PostView = ({ post }) => {
 
 export default PostView;
 
-
+// This takes the following Props:
+/*
+        "upvotes": 4,
+        "title": "Hello",
+        "time": "2021-04-05T01:24:41Z",
+        "body": "THis is a post",
+        "picture": "http://127.0.0.1:8000/posts/mc12.PNG"
+*/

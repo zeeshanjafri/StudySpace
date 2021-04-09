@@ -1,60 +1,60 @@
 .groupHeader {
-    padding: 1rem;
-    width: 100%;
+  padding: 1rem;
+  width: 100%;
 }
 
 .groupTitle {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 1rem;
-    @media screen and (min-width: $md_breakpoint) {
-        font-size: 2rem;
-    }
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  @media screen and (min-width: $md_breakpoint) {
+    font-size: 2rem;
+  }
 }
 
 .headerImageAndJoinWrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.25rem 1rem;
-    > img {
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
-        object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  > img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
 
-        @media screen and (min-width: $md_breakpoint) {
-            width: 10rem;
-            height: 10rem;
-        }
+    @media screen and (min-width: $md_breakpoint) {
+      width: 10rem;
+      height: 10rem;
     }
-    .joinGroup {
-        margin-left: auto;
-        color: white;
-        background: red;
-        @media screen and (min-width: $md_breakpoint) {
-            font-size: 1.2rem;
-        }
-        padding: 0.25rem;
-        font-size: 1rem;
-        box-shadow: none;
-        border: 1px solid red;
-        border-radius: 0.25rem;
+  }
+  .joinGroup {
+    margin-left: auto;
+    color: white;
+    background: red;
+    @media screen and (min-width: $md_breakpoint) {
+      font-size: 1.2rem;
     }
-    margin-bottom: 1rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    box-shadow: none;
+    border: 1px solid red;
+    border-radius: 1rem;
+  }
+  margin-bottom: 1rem;
 }
 
 .tagsWrap {
-    p {
-        background-color: grey;
-        padding: 0.25rem 1.25rem;
-        @media screen and (min-width: $md_breakpoint) {
-            padding: 0.25rem 3rem;
-        }
-        color: white;
-        border-radius: 0.25rem;
+  p {
+    background-color: grey;
+    padding: 0.25rem 1.25rem;
+    @media screen and (min-width: $md_breakpoint) {
+      padding: 0.25rem 3rem;
     }
+    color: white;
+    border-radius: 0.25rem;
+  }
 
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }

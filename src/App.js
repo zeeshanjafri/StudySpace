@@ -26,7 +26,7 @@ function App() {
 
       </div>
       <BrowserRouter>
-        <div className="flex flex-row border h-screen">
+        <div className="flex flex-row border h-auto">
           <Sidebar />
           {/* This is the area where the different components are rendered based on route */}
           <Switch>
