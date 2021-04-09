@@ -1,3 +1,8 @@
 .groupContainer {
     width: 100%;
 }
+.groupDescAndPostContainer {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(1fr, 2);
+}
