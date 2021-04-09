@@ -133,16 +133,26 @@ a {
 .groupDescContainer {
   width: 100%;
   background-color: grey;
-  border-radius: 0.25rem;
+  border-radius: 3rem;
   padding: 1rem 2rem;
 }
 .groupDescContainer h1 {
-  font-size: 2rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .groupDescContainer h1 {
+    font-size: 2rem;
+  }
 }
 .groupDescContainer p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin: 0;
   margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .groupDescContainer p {
+    font-size: 1.4rem;
+  }
 }
 .groupDescContainer .underline {
   width: 100%;
