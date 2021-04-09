@@ -18,11 +18,11 @@ const GroupHeader = (props) => {
                 <button className="joinGroup">Join Group</button>
             </div>
             <div className="tagsWrap">
-                <p>Java</p>
+                <p>Tag 1</p>
 
-                <p>Java</p>
+                <p>Tag 2</p>
 
-                <p>Java</p>
+                <p>Tag 3</p>
             </div>
         </div>
     );
