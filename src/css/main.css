@@ -1,46 +1,127 @@
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+}
 
 .groupViewContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  padding: 1rem; }
+  padding: 1rem;
+}
+
+.groupContainer {
+  width: 100%;
+}
 
 .sidebarSectionText {
   color: black;
   font-size: 2.4rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .sidebarContentText {
   color: black;
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 .groupViewWrap {
   max-width: 12rem;
   background: white;
   grid-gap: 1rem;
-  border-radius: 0.25rem; }
-  .groupViewWrap .groupViewImg {
-    width: 100%;
-    object-fit: cover; }
-  .groupViewWrap p {
-    text-align: center;
-    font-size: 1.4rem; }
+  border-radius: 0.25rem;
+}
+.groupViewWrap .groupViewImg {
+  width: 100%;
+  object-fit: cover;
+}
+.groupViewWrap p {
+  text-align: center;
+  font-size: 1.4rem;
+}
 
 .joinedGroupAndFriendViewWrap {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem; }
-  .joinedGroupAndFriendViewWrap p {
+  margin-bottom: 1rem;
+}
+.joinedGroupAndFriendViewWrap p {
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 1rem;
+}
+.joinedGroupAndFriendViewWrap img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+
+.groupHeader {
+  padding: 1rem;
+  width: 100%;
+}
+
+.groupTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .groupTitle {
+    font-size: 2rem;
+  }
+}
+
+.headerImageAndJoinWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+.headerImageAndJoinWrap > img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .headerImageAndJoinWrap > img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+.headerImageAndJoinWrap .joinGroup {
+  margin-left: auto;
+  color: white;
+  background: red;
+  padding: 0.25rem;
+  font-size: 1rem;
+  box-shadow: none;
+  border: 1px solid red;
+  border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .headerImageAndJoinWrap .joinGroup {
     font-size: 1.2rem;
-    color: black;
-    margin-left: 1rem; }
-  .joinedGroupAndFriendViewWrap img {
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    object-fit: cover; }
+  }
+}
+
+.tagsWrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+.tagsWrap p {
+  background-color: grey;
+  padding: 0.25rem 1.25rem;
+  color: white;
+  border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .tagsWrap p {
+    padding: 0.25rem 3rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
