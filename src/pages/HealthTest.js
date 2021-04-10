@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { Component } from "react";
 
 const api = axios.create({
-  baseURL: `http://127.0.0.1:8000/`,
+  // baseURL: `http://127.0.0.1:8000/`,
+  baseURL: `http://studyspace-backend.herokuapp.com/`,
 });
 
 // This line makes sure that the response is in JSON format
