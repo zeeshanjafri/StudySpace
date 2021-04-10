@@ -26,7 +26,7 @@ export default function CommentBtn({ post }) {
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                <div className="flex items-start justify-between p-5 border-b-2 border-solid border-blueGray-200 rounded-t">
                   <h3 className="text-3xl font-semibold">{post.title}</h3>
                   <button
                     className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold focus:outline-none"
@@ -39,7 +39,7 @@ export default function CommentBtn({ post }) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <div className="border-b pb-2">
+                  <div className="pb-2">
                     <p className="text-xs">
                       <span className="uppercase font-bold text-red-400">
                         {post.author}
@@ -51,6 +51,34 @@ export default function CommentBtn({ post }) {
                     {post.text}
                   </p>
                 </div>
+                {/* Post Responses */}
+                <div className="border-t-2 pt-2 bg-gray-50">
+                  <div className="border-b relative px-6 flex-auto">
+                    <div className="pt-2">
+                      <p className="text-xs">
+                        <span className="uppercase font-bold text-purple-600">
+                          Adam
+                        </span>
+                      </p>
+                    </div>
+                    <p className="my-2 text-blueGray-500 text-md leading-relaxed">
+                      This is a cool piece of news. Any reason that caused this?
+                    </p>
+                  </div>
+                  <div className="border-b relative px-6 flex-auto">
+                    <div className="pt-2">
+                      <p className="text-xs">
+                        <span className="uppercase font-bold text-purple-600">
+                          Ann
+                        </span>
+                      </p>
+                    </div>
+                    <p className="my-2 text-blueGray-500 text-md leading-relaxed">
+                      Elon Musk is a real cool dude.
+                    </p>
+                  </div>
+                </div>
+
                 {/*footer*/}
                 <div className="flex items-center p-6 border-t border-solid border-blueGray-200 rounded-b">
                   <label className="block w-full">
@@ -61,7 +89,7 @@ export default function CommentBtn({ post }) {
                     ></input>
                   </label>
                   <button
-                    className="text-red-500 border font-bold uppercase px-6 py-2 ml-2 text-sm ease-linear transition-all duration-150"
+                    className="bg-red-500 text-white border font-bold uppercase px-6 py-2 ml-2 text-sm ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
