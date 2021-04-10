@@ -34,7 +34,7 @@ const Group = (props) => {
 
           {/* NewPost Form */}
           <div className="border rounded-lg w-full p-8">
-            <div className=" p-4" id="postForm">
+            <div className="p-4" id="postForm">
               <h1 className="mb-4 text-md font-bold">Create a New Post</h1>
               <div className="grid grid-cols-1 gap-6">
                 <label className="block">
