@@ -1,125 +1,293 @@
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+}
 
 .groupViewContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  padding: 1rem; }
+  padding: 1rem;
+}
 
 .groupContainer {
-  width: 100%; }
+  width: 100%;
+}
 
 .groupDescAndPostContainer {
   display: flex;
-  padding: 2rem; }
+  padding: 2rem;
+}
 
 .sidebarSectionText {
   color: black;
   font-size: 2.4rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .sidebarContentText {
   color: black;
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 .groupViewWrap {
   max-width: 12rem;
   background: white;
   grid-gap: 1rem;
-  border-radius: 0.25rem; }
-  .groupViewWrap .groupViewImg {
-    width: 100%;
-    object-fit: cover; }
-  .groupViewWrap p {
-    text-align: center;
-    font-size: 1.4rem; }
+  border-radius: 0.25rem;
+}
+.groupViewWrap .groupViewImg {
+  width: 100%;
+  object-fit: cover;
+}
+.groupViewWrap p {
+  text-align: center;
+  font-size: 1.4rem;
+}
 
 .joinedGroupAndFriendViewWrap {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem; }
-  .joinedGroupAndFriendViewWrap p {
-    font-size: 1.2rem;
-    color: black;
-    margin-left: 1rem; }
-  .joinedGroupAndFriendViewWrap img {
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    object-fit: cover; }
+  margin-bottom: 1rem;
+}
+.joinedGroupAndFriendViewWrap p {
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 1rem;
+}
+.joinedGroupAndFriendViewWrap img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
 
 .groupHeader {
   padding: 1rem;
-  width: 100%; }
+  width: 100%;
+}
 
 .groupTitle {
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 1rem; }
-  @media screen and (min-width: 768px) {
-    .groupTitle {
-      font-size: 2rem; } }
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .groupTitle {
+    font-size: 2rem;
+  }
+}
 
 .headerImageAndJoinWrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.25rem 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
+.headerImageAndJoinWrap > img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
   .headerImageAndJoinWrap > img {
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover; }
-    @media screen and (min-width: 768px) {
-      .headerImageAndJoinWrap > img {
-        width: 10rem;
-        height: 10rem; } }
+    width: 10rem;
+    height: 10rem;
+  }
+}
+.headerImageAndJoinWrap .joinGroup {
+  margin-left: auto;
+  color: white;
+  background: red;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  box-shadow: none;
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 768px) {
   .headerImageAndJoinWrap .joinGroup {
-    margin-left: auto;
-    color: white;
-    background: red;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    box-shadow: none;
-    border: 1px solid red;
-    border-radius: 1rem; }
-    @media screen and (min-width: 768px) {
-      .headerImageAndJoinWrap .joinGroup {
-        font-size: 1.2rem; } }
+    font-size: 1.2rem;
+  }
+}
 
 .tagsWrap {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+}
+.tagsWrap p {
+  background-color: grey;
+  padding: 0.25rem 1.25rem;
+  color: white;
+  border-radius: 0.25rem;
+}
+@media screen and (min-width: 768px) {
   .tagsWrap p {
-    background-color: grey;
-    padding: 0.25rem 1.25rem;
-    color: white;
-    border-radius: 0.25rem; }
-    @media screen and (min-width: 768px) {
-      .tagsWrap p {
-        padding: 0.25rem 3rem; } }
+    padding: 0.25rem 3rem;
+  }
+}
 
 .groupDescContainer {
   border-radius: 1rem;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+}
+.groupDescContainer h1 {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
   .groupDescContainer h1 {
-    font-size: 1.4rem; }
-    @media screen and (min-width: 768px) {
-      .groupDescContainer h1 {
-        font-size: 2rem; } }
+    font-size: 2rem;
+  }
+}
+.groupDescContainer p {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
   .groupDescContainer p {
-    font-size: 1.1rem;
-    margin: 0;
-    margin-top: 1rem; }
-    @media screen and (min-width: 768px) {
-      .groupDescContainer p {
-        font-size: 1.4rem; } }
-  .groupDescContainer .underline {
-    width: 100%;
-    height: 0.1rem;
-    background-color: black; }
+    font-size: 1.4rem;
+  }
+}
+.groupDescContainer .underline {
+  width: 100%;
+  height: 0.1rem;
+  background-color: black;
+}
+
+.searchBarForm {
+  background: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+  padding: 0.25rem;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-right: auto;
+  position: relative;
+}
+
+.searchBarIcons {
+  color: #c1dbf4;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-right: 0.3rem;
+}
+@media screen and (min-width: 520px) {
+  .searchBarIcons {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .searchBarIcons {
+    font-size: 2.7rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.searchBarInput {
+  font-size: 1.2rem;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin: none;
+  width: 100%;
+  font-size: 1rem;
+}
+.searchBarInput:focus {
+  box-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .searchBarInput {
+    font-size: 1.3rem;
+  }
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.matchContainer {
+  opacity: 1;
+  width: 28rem;
+  position: absolute;
+  top: 3rem;
+  left: 0.2rem;
+  z-index: 3;
+  transition: opacity 0.2s ease-in;
+  box-shadow: 0 0 12px #000000;
+}
+@media screen and (min-width: 520px) {
+  .matchContainer {
+    width: 34rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .matchContainer {
+    width: 50rem;
+  }
+}
+
+.matchRow {
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+}
+.matchRow:hover {
+  background: #212d3d;
+}
+.matchRow:hover .matchTextWrap {
+  color: white;
+}
+.matchRow .matchRowImage {
+  opacity: 0;
+  width: 12rem;
+  height: 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .matchRow .matchRowImage {
+    width: 12rem;
+    height: 4.5rem;
+  }
+}
+
+.hideMatchContainer {
+  opacity: 0;
+}
+
+.matchTextWrap {
+  margin-left: 1rem;
+  color: black;
+  overflow: hidden;
+}
+.matchTextWrap .matchTitle {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.matchTextWrap .matchPrice {
+  margin: 0;
+  margin-top: 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .matchTextWrap .matchPrice {
+    margin-top: 0.5rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
