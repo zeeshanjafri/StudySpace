@@ -1,20 +1,16 @@
-function revealForm() {
-  var x = document.getElementById("postForm");
-  x.classList.toggle("hidden");
-}
+// function revealForm() {
+//   var x = document.getElementById("postForm");
+//   x.classList.toggle("hidden");
+// }
 
 const NewPostHeader = (props) => {
-
-  function createPost() {
-    console.log("Post created!")
-  }
 
   return (
     <div className="flex flex-col">
       <div className="p-3 flex flex-row justify-between">
         <h1 className="text-lg font-bold">New Posts</h1>
 
-        <button className="" onClick={revealForm}>
+        {/* <button className="">
           <svg
             className="w-8 h-8"
             fill="#DC2626"
@@ -27,35 +23,7 @@ const NewPostHeader = (props) => {
               clipRule="evenodd"
             />
           </svg>
-        </button>
-      </div>
-      {/* The form div (originally hidden) */}
-      <div className="border p-4 hidden" id="postForm">
-        <h1 className="mb-4 text-md font-bold">Create a New Post</h1>
-        <div className="grid grid-cols-1 gap-6">
-          <label className="block">
-            <span className="text-gray-700">Title</span>
-            <input
-              type="text"
-              className="mt-1 block w-full"
-              placeholder="Post Title"
-            ></input>
-          </label>
-          <label className="block">
-            <span className="text-gray-700">Body</span>
-            <textarea
-              type="text"
-              className="mt-1 block w-full"
-              placeholder="Post Body"
-              rows="3"
-            ></textarea>
-          </label>
-          <label className="block">
-            <button onClick={createPost} className="border bg-red-600 rounded-full px-6 py-2 text-white">
-              Post
-            </button>
-          </label>
-        </div>
+        </button> */}
       </div>
     </div>
   );
