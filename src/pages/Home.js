@@ -16,7 +16,7 @@ const Home = (props) => {
 
     const renderContent = () => {
         if (!props.groups) {
-            return <h1>Loading</h1>;
+            return <h1>Loading...</h1>;
         } else {
             return (
                 <div className="flex flex-col w-full">
@@ -46,7 +46,7 @@ const Home = (props) => {
                                         key={index}
                                         title={group.groupName}
                                         image={group.picture}
-                                        slug={group.slug}
+                                        slug={group.id}
                                     />
                                 ))}
                             </div>
@@ -70,6 +70,7 @@ const Home = (props) => {
             );
         }
     };
+
     return <React.Fragment>{renderContent()}</React.Fragment>;
 };
 
