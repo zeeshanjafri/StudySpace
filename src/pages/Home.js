@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import PostView from "../components/PostView";
 import GroupView from "../components/GroupView";
-import { demoGroups } from "../data/demoGroups";
+// import { demoGroups } from "../data/demoGroups";
 import { demoPosts } from "../data/demoPosts";
 import { fetchGroups } from "../actions";
 import { connect } from "react-redux";
 // This limits the posts to the top 3
 const posts = demoPosts.slice(0, 3);
-const groups = demoGroups.slice(0, 4);
+// const groups = demoGroups.slice(0, 4);
 
 const Home = (props) => {
     useEffect(() => {
