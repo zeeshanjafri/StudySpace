@@ -1,4 +1,4 @@
-const tags = ["Computer Science", "Professor", "Laurier"];
+let tags = ["Computer Science", "Professor", "Laurier"];
 
 const Profile = (props) => {
   if (props.tags) {
