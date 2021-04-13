@@ -11,7 +11,7 @@ import {
 //compose is used to make it easier to "organize" mapStateToProps and redux form
 import { StoreState } from "../reducers";
 import { connect } from "react-redux";
-import { RegisterFormProps } from "./Register";
+
 //Re-usable component
 
 //Typescriptand redux form:
@@ -47,22 +47,6 @@ const renderTextInput = ({ input, label, meta, placeHolder }: any) => {
     //props to <input>
 };
 
-const renderPasswordInput = ({ input, label, meta, placeHolder }: any) => {
-    return (
-        <div>
-            {/* <label>{label}</label> */}
-            <input
-                data-testid={label}
-                className="createAuthInputs"
-                type="password"
-                {...input}
-                autoComplete="off"
-            />
-            {renderError(meta)}
-        </div>
-    );
-};
-
 const RegisterForm = (props) => {
     const onSubmit = (formValues: any, dispatch: any) => {
         //onSubmit's default param is any
@@ -84,7 +68,7 @@ const RegisterForm = (props) => {
             >
                 <div className="authFieldSection">
                     <div className="authFormFieldTitleWrap">
-                        <h1>Email</h1>
+                        <h1>Title</h1>
                         <h3 className="authFormFieldTitleEmailInUse">
                             {props.authStatus}
                         </h3>
@@ -99,19 +83,7 @@ const RegisterForm = (props) => {
 
                 <div className="authFieldSection">
                     <div className="authFormFieldTitleWrap">
-                        <h1>Password</h1>
-                    </div>
-                    <Field
-                        name="password"
-                        label="password"
-                        type="password"
-                        component={renderPasswordInput}
-                    />
-                </div>
-
-                <div className="authFieldSection">
-                    <div className="authFormFieldTitleWrap">
-                        <h1>Username (Will be shown to other users)</h1>
+                        <h1>Body</h1>
                     </div>
                     <Field
                         name="username"
@@ -122,7 +94,7 @@ const RegisterForm = (props) => {
                 </div>
 
                 <button className="authButton" data-testid="registerButton">
-                    Continue
+                    Post
                 </button>
             </form>
         </React.Fragment>
@@ -135,22 +107,25 @@ const validate = (formValues) => {
     //If you return an empty object, redux form will assume everything is ok
     if (!formValues.email) {
         //user did not enter title, so undefined
-        errors.email = "You must enter an email";
+        errors.email = "You must enter an title";
         //Must be the same name as field name! The "error" property in {meta} would receive this
-    }
-    if (!formValues.password) {
-        errors.password = "You must enter a password";
     }
 
     if (!formValues.username) {
-        errors.username = "You must enter a username";
+        errors.username = "You must enter a body";
     }
 
     return errors;
     //Erors is going to be passed to renderInput's meta
 };
 
-export default connect({})(
+const mapStateToProps = (state) => {
+    return {
+        // authStatus: state.authStatus.errorMessage,
+    };
+};
+
+export default connect(mapStateToProps)(
     reduxForm({
         form: "registerForm",
         validate,

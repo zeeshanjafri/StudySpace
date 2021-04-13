@@ -10,7 +10,7 @@ import NewPostHeader from "./NewPostHeader";
 
 import { fetchGroups, fetchPosts } from "../actions";
 import { connect } from "react-redux";
-
+import NewPostForm from "./NewPostForm";
 // This limits the posts to the top 3
 const posts = demoPosts.slice(0, 3);
 const groups = demoGroups;
@@ -56,7 +56,7 @@ const Group = (props) => {
                             />
 
                             {/* NewPost Form */}
-                            <div className="border rounded-lg w-full p-8">
+                            {/* <div className="border rounded-lg w-full p-8">
                                 <div className="p-4" id="postForm">
                                     <h1 className="mb-4 text-md font-bold">
                                         Create a New Post
@@ -93,7 +93,8 @@ const Group = (props) => {
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
+                            <NewPostForm />
                         </div>
 
                         {/* The new post container: */}
