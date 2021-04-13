@@ -31,7 +31,6 @@ const Group = (props) => {
 
     const renderContent = () => {
         if (props.groups && props.posts) {
-            console.log(props.posts);
             // console.log("the prop is a", typeof(props.groups[0].id));
             // console.log("but the slug is a ",typeof(groupSlug))
 
@@ -45,7 +44,10 @@ const Group = (props) => {
 
             return (
                 <div className="flex flex-col w-full">
-                    <GroupHeader title={mainGroup.groupName} />
+                    <GroupHeader
+                        title={mainGroup.groupName}
+                        tags={mainGroup.tags}
+                    />
                     <div className="groupDescAndPostContainer space-x-4 flex-row">
                         <div className="flex flex-col space-y-6 w-1/2">
                             <GroupDesc
