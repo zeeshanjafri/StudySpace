@@ -15,6 +15,7 @@ import reduxThunk from "redux-thunk";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
     reducers,
+    { authStatus: { authenticated: 1, errorMessage: "" } },
     composeEnhancers(applyMiddleware(reduxThunk))
 );
 ReactDOM.render(
