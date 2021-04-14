@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const GroupHeader = (props) => {
+    console.log(props.tags.split(","));
     return (
         <div className="groupHeader">
             <div className="headerImageAndJoinWrap">
@@ -18,11 +19,9 @@ const GroupHeader = (props) => {
                 <button className="joinGroup">Join Group</button>
             </div>
             <div className="tagsWrap">
-                <p>Tag 1</p>
-
-                <p>Tag 2</p>
-
-                <p>Tag 3</p>
+                {props.tags.split(",").map((tag, index) => {
+                    return <p key={index}>{tag}</p>;
+                })}
             </div>
         </div>
     );
