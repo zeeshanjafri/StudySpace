@@ -74,8 +74,8 @@ const RegisterForm = (props) => {
                         </h3>
                     </div>
                     <Field
-                        name="email"
-                        label="email"
+                        name="title"
+                        label="title"
                         type="text"
                         component={renderTextInput}
                     />
@@ -86,8 +86,8 @@ const RegisterForm = (props) => {
                         <h1>Body</h1>
                     </div>
                     <Field
-                        name="username"
-                        label="username"
+                        name="body"
+                        label="body"
                         type="text"
                         component={renderTextInput}
                     />
@@ -105,14 +105,14 @@ const validate = (formValues) => {
     //MUST BE NAMED VALIDATE! Other names would be ignored by reduxForm(..)
     const errors = {};
     //If you return an empty object, redux form will assume everything is ok
-    if (!formValues.email) {
+    if (!formValues.title) {
         //user did not enter title, so undefined
-        errors.email = "You must enter an title";
+        errors.title = "You must enter an title";
         //Must be the same name as field name! The "error" property in {meta} would receive this
     }
 
-    if (!formValues.username) {
-        errors.username = "You must enter a body";
+    if (!formValues.body) {
+        errors.body = "You must enter a body";
     }
 
     return errors;

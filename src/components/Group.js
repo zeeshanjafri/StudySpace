@@ -8,7 +8,7 @@ import { demoPosts } from "../data/demoPosts";
 import { demoGroups } from "../data/demoGroups";
 import NewPostHeader from "./NewPostHeader";
 
-import { fetchGroups, fetchPosts } from "../actions";
+import { fetchGroups, fetchPosts, createAPost } from "../actions";
 import { connect } from "react-redux";
 import NewPostForm from "./NewPostForm";
 // This limits the posts to the top 3
@@ -28,6 +28,16 @@ const Group = (props) => {
         props.fetchGroups();
         props.fetchPosts();
     }, []);
+
+    const onCreateAPost = (formValues) => {
+        const dataProperties = {
+            upvotes: 0,
+            time: new Date().toLocaleString(),
+        };
+        const newObj = { ...formValues, ...dataProperties };
+        console.log(newObj);
+        props.createAPost(newObj);
+    };
 
     const renderContent = () => {
         if (props.groups && props.posts) {
@@ -94,7 +104,11 @@ const Group = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            <NewPostForm />
+                            <NewPostForm
+                                onSubmit={(formValues: any) =>
+                                    onCreateAPost(formValues)
+                                }
+                            />
                         </div>
 
                         {/* The new post container: */}
@@ -125,4 +139,8 @@ const mapStateToProps = (state) => {
         posts: state.posts.data,
     };
 };
-export default connect(mapStateToProps, { fetchGroups, fetchPosts })(Group);
+export default connect(mapStateToProps, {
+    fetchGroups,
+    fetchPosts,
+    createAPost,
+})(Group);
