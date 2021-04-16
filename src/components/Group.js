@@ -11,6 +11,7 @@ import NewPostHeader from "./NewPostHeader";
 import { fetchGroups, fetchPosts, createAPost } from "../actions";
 import { connect } from "react-redux";
 import NewPostForm from "./NewPostForm";
+import { useLocation } from "react-router-dom";
 // This limits the posts to the top 3
 const posts = demoPosts.slice(0, 3);
 const groups = demoGroups;
@@ -39,7 +40,6 @@ const Group = (props) => {
         const newObj = { ...formValues, ...dataProperties };
         console.log(newObj);
         await props.createAPost(newObj);
-        props.fetchPosts();
     };
 
     const renderContent = () => {
@@ -48,7 +48,7 @@ const Group = (props) => {
             // console.log("but the slug is a ",typeof(groupSlug))
 
             function slugMatches(group) {
-                return group.id === parseInt(groupSlug, 10);
+                return group.slug === props.match.params.groupName;
             }
 
             const mainGroup = props.groups.find(slugMatches);
@@ -120,7 +120,13 @@ const Group = (props) => {
 
                             <div className="flex flex-col mt-3 space-y-4">
                                 {props.posts.map((post, index) => {
-                                    return <PostView key={index} post={post} />;
+                                    if (
+                                        props.match.params.groupName ===
+                                        post.slug
+                                    )
+                                        return (
+                                            <PostView key={index} post={post} />
+                                        );
                                 })}
                             </div>
                         </div>

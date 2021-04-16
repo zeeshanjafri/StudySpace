@@ -46,7 +46,7 @@ const Home = (props) => {
                                         key={index}
                                         title={group.groupName}
                                         image={group.picture}
-                                        slug={group.id}
+                                        slug={group.slug}
                                     />
                                 ))}
                             </div>
