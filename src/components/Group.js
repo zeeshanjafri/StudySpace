@@ -8,9 +8,10 @@ import { demoPosts } from "../data/demoPosts";
 import { demoGroups } from "../data/demoGroups";
 import NewPostHeader from "./NewPostHeader";
 
-import { fetchGroups, fetchPosts } from "../actions";
+import { fetchGroups, fetchPosts, createAPost } from "../actions";
 import { connect } from "react-redux";
 import NewPostForm from "./NewPostForm";
+import { useLocation } from "react-router-dom";
 // This limits the posts to the top 3
 const posts = demoPosts.slice(0, 3);
 const groups = demoGroups;
@@ -29,13 +30,25 @@ const Group = (props) => {
         props.fetchPosts();
     }, []);
 
+    const onCreateAPost = async (formValues) => {
+        const dataProperties = {
+            group_id: "http://studyspace-backend.herokuapp.com/Groups/1/",
+            author: "https://studyspace-backend.herokuapp.com/Users/1/",
+            upvotes: 0,
+            slug: "financial-markets",
+        };
+        const newObj = { ...formValues, ...dataProperties };
+        console.log(newObj);
+        await props.createAPost(newObj);
+    };
+
     const renderContent = () => {
         if (props.groups && props.posts) {
             // console.log("the prop is a", typeof(props.groups[0].id));
             // console.log("but the slug is a ",typeof(groupSlug))
 
             function slugMatches(group) {
-                return group.id === parseInt(groupSlug, 10);
+                return group.slug === props.match.params.groupName;
             }
 
             const mainGroup = props.groups.find(slugMatches);
@@ -94,7 +107,11 @@ const Group = (props) => {
                                     </div>
                                 </div>
                             </div> */}
-                            <NewPostForm />
+                            <NewPostForm
+                                onSubmit={(formValues: any) =>
+                                    onCreateAPost(formValues)
+                                }
+                            />
                         </div>
 
                         {/* The new post container: */}
@@ -103,7 +120,13 @@ const Group = (props) => {
 
                             <div className="flex flex-col mt-3 space-y-4">
                                 {props.posts.map((post, index) => {
-                                    return <PostView key={index} post={post} />;
+                                    if (
+                                        props.match.params.groupName ===
+                                        post.slug
+                                    )
+                                        return (
+                                            <PostView key={index} post={post} />
+                                        );
                                 })}
                             </div>
                         </div>
@@ -125,4 +148,8 @@ const mapStateToProps = (state) => {
         posts: state.posts.data,
     };
 };
-export default connect(mapStateToProps, { fetchGroups, fetchPosts })(Group);
+export default connect(mapStateToProps, {
+    fetchGroups,
+    fetchPosts,
+    createAPost,
+})(Group);

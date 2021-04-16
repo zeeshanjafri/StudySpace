@@ -42,9 +42,7 @@ const Sidebar = (props) => {
                                     key={index}
                                     title={data.group_id.groupName}
                                     image={data.group_id.image}
-                                    slug={`/group/${data.group_id.url.slice(
-                                        -1
-                                    )}`}
+                                    slug={`/group/${data.group_id.slug}`}
                                 />
                             ))}
                         </div>
