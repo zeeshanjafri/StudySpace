@@ -29,14 +29,17 @@ const Group = (props) => {
         props.fetchPosts();
     }, []);
 
-    const onCreateAPost = (formValues) => {
+    const onCreateAPost = async (formValues) => {
         const dataProperties = {
+            group_id: "http://studyspace-backend.herokuapp.com/Groups/1/",
+            author: "https://studyspace-backend.herokuapp.com/Users/1/",
             upvotes: 0,
-            time: new Date().toLocaleString(),
+            slug: "financial-markets",
         };
         const newObj = { ...formValues, ...dataProperties };
         console.log(newObj);
-        props.createAPost(newObj);
+        await props.createAPost(newObj);
+        props.fetchPosts();
     };
 
     const renderContent = () => {
