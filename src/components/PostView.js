@@ -14,7 +14,7 @@ const PostView = ({ post }) => {
             </div>
             <div className="border-t-2 py-1 pb-6 border-b-2">
                 <h1 className="text-md font-bold">{post.title}</h1>
-                <p>{post.text}</p>
+                <p>{post.body}</p>
             </div>
             <div className="pt-2 flex flex-row items-center">
                 <button className="">

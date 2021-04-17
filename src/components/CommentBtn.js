@@ -42,13 +42,13 @@ export default function CommentBtn({ post }) {
                   <div className="pb-2">
                     <p className="text-xs">
                       <span className="uppercase font-bold text-red-400">
-                        {post.author}
+                        {post.author.firstName + " " + post.author.lastName}
                       </span>{" "}
                       - {post.time}
                     </p>
                   </div>
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    {post.text}
+                    {post.body}
                   </p>
                 </div>
                 {/* Post Responses */}

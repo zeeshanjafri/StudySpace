@@ -33,14 +33,6 @@ const Home = (props) => {
                         <div className="groupSection w-1/2 border rounded-lg p-4">
                             <h1 className="text-lg font-bold">Top Groups</h1>
                             <div className="groupViewContainer mt-2">
-                                {/* {groups.map((group) => (
-                              <GroupView
-                                  key={group.slug}
-                                  title={group.title}
-                                  image={group.image}
-                                  slug={group.slug}
-                              />
-                          ))} */}
                                 {props.groups.map((group, index) => (
                                     <GroupView
                                         key={index}
