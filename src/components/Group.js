@@ -51,7 +51,7 @@ const Group = (props) => {
                 const newObj = { ...formValues, ...dataProperties };
                 console.log(newObj);
                 await props.createAPost(newObj);
-                props.fetchGroups();
+                props.fetchPosts();
             };
             // console.log(mainGroup);
 
