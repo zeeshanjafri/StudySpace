@@ -1,4 +1,4 @@
-let tags = ["Computer Science", "Professor", "Laurier"];
+let tags = ["Computer Science", "Data Science", "Laurier"];
 
 const Profile = (props) => {
   if (props.tags) {
@@ -19,7 +19,7 @@ const Profile = (props) => {
           />
         </div>
         <div className="flex flex-col ml-6 p-4 justify-center">
-          <p className="text-2xl font-bold">{props.name || "David Brown"}</p>
+          <p className="text-2xl font-bold">{props.name || "Mackenzie Van Zanden"}</p>
           {/* Tags go here */}
           <div className="flex flex-row mt-2 space-x-4">
             {tags.map((tag) => (

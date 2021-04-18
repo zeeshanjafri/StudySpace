@@ -37,7 +37,7 @@ const Home = (props) => {
                                     <GroupView
                                         key={index}
                                         title={group.groupName}
-                                        image={group.picture}
+                                        // image={group.picture}
                                         slug={group.slug}
                                     />
                                 ))}

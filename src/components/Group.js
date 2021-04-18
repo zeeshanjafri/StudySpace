@@ -60,7 +60,7 @@ const Group = (props) => {
                     <GroupHeader
                         title={mainGroup.groupName}
                         tags={mainGroup.tags}
-                        image={mainGroup.picture}
+                        // image={mainGroup.picture}
                     />
                     <div className="groupDescAndPostContainer space-x-4 flex-row">
                         <div className="flex flex-col space-y-6 w-1/2">

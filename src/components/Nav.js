@@ -39,7 +39,7 @@ const Sidebar = (props) => {
                 <JoinedGroupAndFriendView
                   key={index}
                   title={data.group_id.groupName}
-                  image={data.group_id.picture}
+                  // image={data.group_id.picture}
                   slug={`/group/${data.group_id.slug}`}
                 />
               ))}
